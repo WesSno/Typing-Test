@@ -24,8 +24,6 @@ function App() {
   const reference = referenceText;
   const hasFinishedRef = useRef(false);
 
-  console.log(typedText);
-
   const handleTyping = (value) => {
     if (value.length > reference.length) return;
 
