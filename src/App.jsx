@@ -169,7 +169,7 @@ function App() {
 
   /*************** FETCHING DATA ******************/
   useEffect(() => {
-    fetch("/src/components/data.json")
+    fetch("/data.json")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
