@@ -124,16 +124,14 @@ I used ChatGPT during this project mainly for:
 - Structuring cleaner logic for test completion
 - Improving UX decisions (like disabling spellcheck and autofill)
 
-## What worked well:
+- **What worked well:**
+  - Breaking down complex bugs step-by-step
+  - Identifying race conditions and state timing issues
+  - Suggesting cleaner architecture (like separating finishTest)
 
-- Breaking down complex bugs step-by-step
-- Identifying race conditions and state timing issues
-- Suggesting cleaner architecture (like separating finishTest)
-
-## What didn't:
-
-- Some fixes needed iteration to match real behavior
-- Required manual testing to validate edge cases
+- **What didn't:**
+  - Some fixes needed iteration to match real behavior
+  - Required manual testing to validate edge cases
 
 ## Author
 
