@@ -137,9 +137,6 @@ function App() {
     if (timeLeft === 0 || typedText.length >= reference.length) {
       finishTest();
 
-      // if (adjustedWPM > bestWPM) {
-      //   setBestWPM(adjustedWPM);
-      // }
       return;
     }
 
