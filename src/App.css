@@ -166,6 +166,12 @@ header {
   position: relative;
   z-index: 0;
   margin-bottom: 20px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.reference-wrapper {
+  transition: transform 0.1s linear;
 }
 
 .typing-area.started {
@@ -174,8 +180,6 @@ header {
 }
 
 .typing-area p {
-  /* font-size: 2rem;
-  line-height: 1.5; */
   color: var(--neutral-0);
 }
 
@@ -219,17 +223,28 @@ header {
   outline: none;
   color: transparent;
   resize: none;
-  caret-color: var(--neutral-0);
-  z-index: 1;
+  caret-color: transparent;
+  z-index: 2;
   line-height: 1.5;
   margin-top: 15px;
+  inset: 0;
+  opacity: 0;
+  letter-spacing: 0;
 }
 
 .reference-text {
+  font-family: var(--font-family);
   font-size: 2rem;
   position: relative;
   line-height: 1.5;
-  z-index: 0;
+  z-index: 1;
+  white-space: pre-wrap;
+  letter-spacing: 0;
+  overflow-wrap: break-word;
+}
+
+.reference-text span {
+  white-space: inherit;
 }
 
 .blurred {
@@ -242,13 +257,40 @@ header {
   color: var(--green-500);
 }
 
+.reference-text,
+.text-area {
+  font-family: "Sora", sans-serif;
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
 .reference-text .incorrect {
   color: var(--red-500);
   text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
 }
 
 .reference-text .pending {
   color: var(--neutral-500);
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: var(--neutral-0);
+  vertical-align: center;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 /*********** RESULTS COMPONENTS ***********/
@@ -486,6 +528,11 @@ header {
   .time-mode-theme {
     display: block;
     color: var(--neutral-500);
+  }
+
+  .typing-area {
+    max-height: 100%;
+    overflow-y: hidden;
   }
 
   .results {

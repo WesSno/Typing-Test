@@ -101,6 +101,14 @@ To avoid users cheating by typing random characters:
 - Disabled browser spellcheck and autofill
 - Prevented input overflow
 - Added character comparison feedback (correct / incorrect)
+- Created smooth typing and cursor animations
+
+6. Debugging and Problem Solving
+
+- Debugging complex scrolling and cursor synchronization issues
+- Understanding how DOM positioning affects auto-scroll behavior
+- Identifying conflicts caused by multiple cursor references
+- Improving user experience through iterative testing and refinement
 
 ### Continued development
 
